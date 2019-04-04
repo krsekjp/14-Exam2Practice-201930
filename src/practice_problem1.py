@@ -47,8 +47,8 @@ def main():
     # run_test_double_then_shrink()
     # run_test_reset()
     # run_test_steal()
-    run_test_get_history()
-    # run_test_combined_box()
+    # run_test_get_history()
+    run_test_combined_box()
 
 
 ###############################################################################
@@ -459,7 +459,8 @@ class Box(object):
         #    DIFFICULTY:      4
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
-
+        combo_box = Box(self.contents+other_box.contents, self.volume+other_box.volume)
+        return combo_box
 
 ###############################################################################
 # The TEST functions for the  Box  class begin here.
